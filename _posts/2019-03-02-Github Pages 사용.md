@@ -1,5 +1,7 @@
-comments: true
-
+---
+layout: post
+title: Blogging Like a Hacker
+---
 # Jekyll을 얹어 github pages 를 사용해본다.
 
 + 설치에 우여곡절이 있었다만 여차저차해서 설치 완료.
