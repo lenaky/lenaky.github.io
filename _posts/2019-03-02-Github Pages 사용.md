@@ -1,5 +1,4 @@
 ---
-layout: default
 comments: true
 ---
 # Jekyll을 얹어 github pages 를 사용해본다.
