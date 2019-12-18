@@ -14,7 +14,7 @@ comments: true
 ### 1. WSL 사용
 
 프로그램 및 기능 -> Windows 기능 켜기/끄기 -> Linux 용 Windows 하위 시스템 활성화
-# ![WSL]](/assets/img/program_function_01.png)
+# ![WSL](/assets/img/program_function_01.png)
 
 ### 2. Ubuntu 설치
 
@@ -22,7 +22,7 @@ Microsoft Store 앱에서 Ubuntu 찾아 설치. (다른 것 사용해도 되겠�
 
 설치가 되면 Ubuntu에 접속할 수 있는 터미널이 생기게 됩니다. 아래의 과정을 수행하면 됩니다.
 
-# ![ubuntu]](/assets/img/microsoft_store.png)
+# ![ubuntu](/assets/img/microsoft_store.png)
 
 ```bash
 $ sudo apt update
