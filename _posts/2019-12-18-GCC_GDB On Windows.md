@@ -39,7 +39,7 @@ gcc 를 선택하여 버전을 사용하고 싶다면 update-alternatives 설정
 $ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 90 --slave /usr/bin/g++ g++ /usr/bin/g++-9 --slave /usr/bin/gcov gcov /usr/bin/gcov-9
 $ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 70 --slave /usr/bin/g++ g++ /usr/bin/g++-7 --slave /usr/bin/gcov gcov /usr/bin/gcov-7
 ```
-참고로, 기본으로 gcc 7 버전이 설치되어있어 위와 같이 세팅한 뒤
+참고로, 제가 이 환경을 구성했을 때 기본으로 gcc 7 버전이 설치되어있었기 때문에 위와 같이 세팅한 뒤 아래처럼 --config 를 사용할 수 있었습니다.
 ```bash
 $ sudo update-alternatives --config gcc
 There are 2 choices for the alternative gcc (providing /usr/bin/gcc).
@@ -52,7 +52,7 @@ There are 2 choices for the alternative gcc (providing /usr/bin/gcc).
 
 Press <enter> to keep the current choice[*], or type selection number:
 ```
-위에서 세팅하도록 합니다. update-alternatives 설치 시 우선순위가 가장 높은것이 자동으로 최우선 명령어에 맵핑되므로 굳이 안바꿔줘도 상관은 없습니다.
+update-alternatives 설치 시 우선순위가 가장 높은것이 자동으로 최우선 명령어에 맵핑되므로 굳이 안바꿔줘도 상관은 없습니다.
 
 ### 3. Visual Studio Code 설치
 [(다운로드)](https://code.visualstudio.com/download) 페이지에 접속하여 최신 버전의 Visual Studio Code를 설치합니다.
@@ -62,10 +62,12 @@ Visual Studio Code 를 설치하였으면 아래의 플러그인을 설치합니
 CTRL + SHIFT + X 를 눌러 마켓플레이스 검색 창을 연 뒤, "C/C++" 을 검색하면 나옵니다.
 # ![plugin](/assets/img/vscode_plugin.png)
 
-### 4. WSL 연결을 위한 플러그인 설치
+### 5. WSL 연결을 위한 플러그인 설치
 WSL 연결을 위한 아래의 플러그인을 설치합니다.
 CTRL + SHIFT + X 를 눌러 마켓플레이스 검색 창을 연 뒤, "WSL" 을 검색하면 나옵니다.
 # ![plugin2](/assets/img/WSL_Plugin.png)
+
+---
 
 ## 실제 프로젝트 생성
 
@@ -80,7 +82,7 @@ Visual Studio Code 에서 CTRL+SHIFT+P 를 눌러 팔레트를 엽니다.<br>
 팔레트에 "tasks" 를 검색하여 Configure Default Build Task 를 실행합니다.
 # ![task1](/assets/img/task_create.png)
 다시 선택 메뉴가 뜨면 g++ build active file을 설정해줍니다.<br>
-그러면 아래처럼 .vs_code 디렉토리에 자동으로 tasks.json 파일이 생성됩니다.
+그러면 아래처럼 .vscode 디렉토리에 자동으로 tasks.json 파일이 생성됩니다.
 # ![task1](/assets/img/task_create2.png)
 
 ### 4. 빌드하기
@@ -90,7 +92,7 @@ CTRL + SHIFT + B 버튼을 눌러 빌드하면 됩니다. 디폴트 상태의 ta
 ### 5. 디버깅 하기.
 Visual Studio 와 같습니다. 일단 빌드하려는 소스파일에 브레이크포인트를 걸고 F5 를 눌러줍니다.
 # ![debug1](/assets/img/debug1.png)
-환경 선택을 위의 사진처럼 해주고 실행하면 아래처럼 디버깅을 할 수 있습니다.
+환경 선택을 위처럼 해주고 실행하면 자동으로 launch.json 파일이 생성되고 아래처럼 디버깅을 할 수 있습니다.
 # ![debug2](/assets/img/debug2.png)
 # ![debug3](/assets/img/debug3.png)
 
