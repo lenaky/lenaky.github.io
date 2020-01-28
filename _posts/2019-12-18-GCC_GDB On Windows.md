@@ -3,6 +3,9 @@ category: post
 tags: gcc,vscode
 comments: true
 ---
+## 2019-12-27 추가
+찾아보니 이미 [이곳](https://code.visualstudio.com/docs/cpp/config-wsl)에 정리가 되어있었습니다. 좀 더 자세한 정보를 얻고 싶다면 링크로 들어가 확인바랍니다.
+
 ## 들어가며
 본 문서는 최신의 C++ Standard 를 지원하는 빌드환경 구성이 목적이고 Windows 10 에서 WSL + Ubuntu + GCC9.x + Visual Studio Code 를 이용하여 환경을 구성합니다.
 
